@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 
     <?php
-    $titulo = 'Titulo';
+    $titulo = 'Tiendas online';
     $description = 'description';
     $palabrasClaves = 'palabrasClaves';
     $navegador = array(
@@ -13,18 +13,12 @@
         array('string' => 'Tiendas Online', 'url' => 'tiendasonline.php'),
         array('string' => 'Dise&ntilde;o Grafico', 'url' => '#'),
     );
-    $slide = array(
-        array('title' => 'Paginas Web1', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Paginas Web2', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Paginas Web3', 'url' => '#', 'description' => 'description', 'image' => '#')
-    );
+
     
     $elementos = array(
-        array('title' => 'Soluciones para todas las economias', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Tu propia tienda online', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Mejora tu posicionamiento en buscadores', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Nuestros clientes', 'url' => '#', 'description' => 'description', 'image' => '#')
+        array('title' => 'Formula tienda basica', 'precio'=>'50 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3'), 'image' => '#'),
+        array('title' => 'Formula tienda Media',  'precio'=>'150 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 4'), 'image' => '#'),
+        array('title' => 'Formula tienda Abanzada', 'precio'=>'--', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 5'), 'image' => '#'),
     );
     ?>
     <head>
@@ -61,7 +55,7 @@
             <div class="container">
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav ">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="index.php">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
                             echo '<li><a href="' . $navegador[$i]['url'] . '">' . $navegador[$i]['string'] . '</a></li>';
@@ -74,51 +68,6 @@
         </nav> 
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="container">
-
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-                <div class="carousel-inner" role="listbox">
-                    <?php
-                    for ($i = 0; $i < count($slide); $i++) {
-                        if ($i == 0) {
-                            echo '<div class = "item active">
-                                            <h2>' . $slide[$i]['title'] . '</h2>
-                                            <p>' . $slide[$i]['description'] . ' <br/> descripcion para este slide</p>
-                                        </div>';
-                        } else {
-                            echo '<div class = "item ">
-                                            <h2>' . $slide[$i]['title'] . '</h2>
-                                            <p>' . $slide[$i]['description'] . '<br/> descripcion para este slide</p>
-                                        </div>';
-                        }
-                    }
-                    ?>
-                    <ol class="carousel-indicators">
-                    <?php
-                    for ($i = 0; $i < count($slide); $i++) {
-                        if ($i == 0) {
-                            echo '<li class="active" data-target="#carousel-example-generic" data-slide-to="' . $i . ' class=""></li>';
-                        } else {
-                            echo '<li data-target="#carousel-example-generic" data-slide-to="' . $i . ' class=""></li>';
-                        }
-                    }
-                    ?>
-                    </ol>
-                </div>
-
-
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
-        </div>
 
         <div class="container">
             <!-- Example row of columns -->
@@ -126,9 +75,21 @@
                 
                 <?php
                     for ($i = 0; $i < count($elementos); $i++) {
-                        echo '  <div class="col-md-4">
+                        if($i == 1){
+                            $class = "ofertaMedia";
+                        }else{
+                            $class = "";
+                        }
+                        echo '  <div class="col-md-4  precios '.$class. '">
                                     <h2>'.$elementos[$i]['title'].'</h2>
-                                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                    <h3>'.$elementos[$i]['precio'].'</h3>
+                                        <br/>
+                                    <div>';
+                        for ($j = 0; $j < count($elementos[$i]['description']); $j++) {
+                            echo '<p>'.$elementos[$i]['description'][$j].'<p/><hr/>';
+                        }
+                                    
+                                echo '</div>
                                     <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                                 </div>';
                         if((($i+1)%3) == 0){
