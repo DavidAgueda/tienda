@@ -66,63 +66,24 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
 
         <div class="container">
-            <!-- Example row of columns -->
-            <form class="form-horizontal" method="post" action="../test/test.php">
-                <fieldset>
+            <div class="row">
 
-                    <!-- Form Name -->
-                    <legend>Formulario de Contacto</legend>
+                <?php
+                for ($i = 0; $i < count($elementos); $i++) {
+                    echo '  <div class="col-md-4">
+                                    <h2>' . $elementos[$i]['title'] . '</h2>
+                                    <p>'. $elementos[$i]['description'] . '</p>
+                                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                                </div>';
+                    if ((($i + 1) % 3) == 0) {
+                        echo'<div class="row"></div>';
+                    }
+                }
+                ?>
 
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Nombre">Nombre</label>  
-                        <div class="col-md-4">
-                            <input id="Nombre" name="Nombre" placeholder="" class="form-control input-md" required="" type="text">
-                              
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Email">Correo electrónico</label>  
-                        <div class="col-md-4">
-                            <input id="Email" name="Email" placeholder="" class="form-control input-md" required="" type="text">
-                            
-                        </div>
-                    </div>
-
-                    <!-- Select Basic -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="type">Proyecto</label>
-                        <div class="col-md-4">
-                            <select id="type" name="type" class="form-control">
-                                <?php 
-                                for ($i = 0; $i < count($options); $i++) {
-                                    echo '<option value="'.$options[$i]['value'].'">'.$options[$i]['string'].'</option>';
-                                }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Textarea -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="textarea">Descripcion de vuestro protecto</label>
-                        <div class="col-md-4">                     
-                            <textarea class="form-control" id="textarea" name="textarea">Comentarios o descripcion de su proyecto</textarea>
-                        </div>
-                    </div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="send"></label>
-                        <div class="col-md-4">
-                            <button id="send" name="send" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
+            </div>
+            
+            <br/>
 
             <hr>
 

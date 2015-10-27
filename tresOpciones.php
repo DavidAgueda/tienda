@@ -37,10 +37,19 @@
             <p><?php echo $description; ?></p>
         </div>
 
-        <nav class="navbar navbar-inverse  " role="navigation">
+        <nav class="navbar navbar-inverse">
             <div class="container">
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav ">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse in" aria-expanded="true">
+                    <ul class="nav navbar-nav">
                         <li class="active"><a href="model.php?f=index">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
@@ -49,9 +58,9 @@
                         ?>
                         <li><a href="model.php?f=contact">Contact</a></li>
                     </ul>
-                </div>
+                </div><!--/.nav-collapse -->
             </div>
-        </nav> 
+        </nav>
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
 

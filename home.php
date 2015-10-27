@@ -35,11 +35,19 @@
             <h1><?php echo $titulo; ?></h1>
             <p><?php echo $description; ?></p>
         </div>
-
-        <nav class="navbar navbar-inverse  " role="navigation">
+        <nav class="navbar navbar-inverse">
             <div class="container">
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav ">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse in" aria-expanded="true">
+                    <ul class="nav navbar-nav">
                         <li class="active"><a href="model.php?f=index">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
@@ -48,10 +56,21 @@
                         ?>
                         <li><a href="model.php?f=contact">Contact</a></li>
                     </ul>
-                </div>
+                </div><!--/.nav-collapse -->
             </div>
-        </nav> 
+        </nav>
         <p>visitar esto para .htaccess https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/</p>
+        <p>Lista de cosas ha hacer</p>
+        <ol>
+<!--            <li>que no puedan meter codigo en el formulario de contacto</li>-->
+<!--            <li>redireccionar despues del email</li>-->
+            <li>pagina de error ( mejorar ya que el css de pende de la posicion y los enlaces tambien )</li>
+            <li>crear una pagina donde mostrar varios productos (las estilo tienda o fiverr)</li>
+            <li>crear fichero .htaccess</li>
+            <li>crear un estilo mas atractivo</li>
+            <li>rellenar los textos</li>
+            <li>hacer un sistema en el que despues de pagar (paypal) puede descargar el  fichero <br> http://entredesarrolladores.com/3051/como-integrar-una-pasarela-pago-paypal-tienda-virtual-con-php</li>
+        </ol>
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="container">
 

@@ -1,12 +1,11 @@
 <?php
-
 /* Lo primero es añadir al script la clase phpmailer desde la ubicación en que esté */
 require './PHPMailer-master/PHPMailer-master/PHPMailerAutoload.php';
 
-$nombre = $_POST['Nombre'];
-$email = $_POST['Email'];
-$type = $_POST['type'];
-$contenu = $_POST['textarea'];
+$nombre = Htmlspecialchars($_POST['Nombre']);
+$email =  Htmlspecialchars($_POST['Email']);
+$type =  Htmlspecialchars($_POST['type']);
+$contenu =  Htmlspecialchars($_POST['textarea']);
 
 var_dump($_POST);
 
@@ -53,4 +52,5 @@ if (!$mail->Send()) {
     echo "Error: " . $mail->ErrorInfo;
 } else {
     echo "Enviado!";
+    header('Location: ../model/model.php?f=okMail');
 }

@@ -66,63 +66,15 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
 
         <div class="container">
-            <!-- Example row of columns -->
-            <form class="form-horizontal" method="post" action="../test/test.php">
-                <fieldset>
-
-                    <!-- Form Name -->
-                    <legend>Formulario de Contacto</legend>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Nombre">Nombre</label>  
-                        <div class="col-md-4">
-                            <input id="Nombre" name="Nombre" placeholder="" class="form-control input-md" required="" type="text">
-                              
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Email">Correo electrónico</label>  
-                        <div class="col-md-4">
-                            <input id="Email" name="Email" placeholder="" class="form-control input-md" required="" type="text">
-                            
-                        </div>
-                    </div>
-
-                    <!-- Select Basic -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="type">Proyecto</label>
-                        <div class="col-md-4">
-                            <select id="type" name="type" class="form-control">
-                                <?php 
-                                for ($i = 0; $i < count($options); $i++) {
-                                    echo '<option value="'.$options[$i]['value'].'">'.$options[$i]['string'].'</option>';
-                                }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Textarea -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="textarea">Descripcion de vuestro protecto</label>
-                        <div class="col-md-4">                     
-                            <textarea class="form-control" id="textarea" name="textarea">Comentarios o descripcion de su proyecto</textarea>
-                        </div>
-                    </div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="send"></label>
-                        <div class="col-md-4">
-                            <button id="send" name="send" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
+            <br/>
+            <div class="row">
+                <div class="col-md-2 col-xs-1"></div>
+                <div class="col-md-8 col-xs-10">
+                    <h2><?php echo $contenido['title'] ?></h2>
+                    <p><?php echo $contenido['texto']?></p>
+                </div>
+                <div class="col-md-2 col-xs-1"></div>
+            </div>
 
             <hr>
 

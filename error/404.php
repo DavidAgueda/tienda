@@ -5,7 +5,27 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 
     <?php
+$navegador = array(
+//    array('string' => 'Paginas Web', 'url' => 'model/model.php?f=tresOpciones'),
+//    array('string' => 'Tiendas Online', 'url' => 'model/model.php?f=tresOpciones&o=1'),
+//    array('string' => 'Aplicaciones android ', 'url' => 'model/model.php?f=tresOpciones&o=2'),
+//    array('string' => 'Dise&ntilde;o Grafico', 'url' => '#')
+);
+    $titulo = 'Error 404';
+    $description = 'description';
+    $palabrasClaves = 'palabrasClaves';
+    $empresa = 'Super sitios web';
+    
+                $contenido = array(
+                'title'=>'La pagina soliciada no existe',
+                'texto'=> 'Hemos recivido su email. Lo mas temprano posible nos '
+                    . 'pondremos en contacto con usted para concreatar todos los '
+                    . 'detalles de su proyecto'
+                    . '<br/>'
+                    . 'Le saluda atentamente todo el equipo de <strong>'.$empresa.''
+                    . '</strong>s' 
 
+            );
 
     ?>
     <head>
@@ -17,17 +37,17 @@
         <meta name="keywords" content="<?php echo $palabrasClaves; ?>"
               <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-        <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -51,7 +71,7 @@
                 </div>
                 <div class="navbar-collapse collapse in" aria-expanded="true">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="model.php?f=index">Home</a></li>
+                        <li class="active"><a href="/">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
                             echo '<li><a href="' . $navegador[$i]['url'] . '">' . $navegador[$i]['string'] . '</a></li>';
@@ -66,63 +86,15 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
 
         <div class="container">
-            <!-- Example row of columns -->
-            <form class="form-horizontal" method="post" action="../test/test.php">
-                <fieldset>
-
-                    <!-- Form Name -->
-                    <legend>Formulario de Contacto</legend>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Nombre">Nombre</label>  
-                        <div class="col-md-4">
-                            <input id="Nombre" name="Nombre" placeholder="" class="form-control input-md" required="" type="text">
-                              
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Email">Correo electrónico</label>  
-                        <div class="col-md-4">
-                            <input id="Email" name="Email" placeholder="" class="form-control input-md" required="" type="text">
-                            
-                        </div>
-                    </div>
-
-                    <!-- Select Basic -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="type">Proyecto</label>
-                        <div class="col-md-4">
-                            <select id="type" name="type" class="form-control">
-                                <?php 
-                                for ($i = 0; $i < count($options); $i++) {
-                                    echo '<option value="'.$options[$i]['value'].'">'.$options[$i]['string'].'</option>';
-                                }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Textarea -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="textarea">Descripcion de vuestro protecto</label>
-                        <div class="col-md-4">                     
-                            <textarea class="form-control" id="textarea" name="textarea">Comentarios o descripcion de su proyecto</textarea>
-                        </div>
-                    </div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="send"></label>
-                        <div class="col-md-4">
-                            <button id="send" name="send" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
+            <br/>
+            <div class="row">
+                <div class="col-md-2 col-xs-1"></div>
+                <div class="col-md-8 col-xs-10">
+                    <h2><?php echo $contenido['title'] ?></h2>
+                    <p><?php echo $contenido['texto']?></p>
+                </div>
+                <div class="col-md-2 col-xs-1"></div>
+            </div>
 
             <hr>
 
@@ -132,9 +104,9 @@
         </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
                 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
-        <script src="../js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="../js/main.js"></script>
+        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
