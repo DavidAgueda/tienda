@@ -6,4 +6,13 @@
  * and open the template in the editor.
  */
 
-header('Location: model/model.php?f=index');
+    
+  function mifuncion() {
+   global $pais;
+   echo $pais;
+  }
+
+  $pais = "España";
+  mifuncion();
+  echo $pais;
+?>

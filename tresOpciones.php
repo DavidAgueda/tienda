@@ -5,21 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 
     <?php
-    $titulo = 'Paginas Web';
-    $description = 'description';
-    $palabrasClaves = 'palabrasClaves';
-    $navegador = array(
-        array('string' => 'Paginas Web', 'url' => 'paginasweb.php'),
-        array('string' => 'Tiendas Online', 'url' => 'tiendasonline.php'),
-        array('string' => 'Dise&ntilde;o Grafico', 'url' => '#'),
-    );
 
-    
-    $elementos = array(
-        array('title' => 'Formula basica', 'precio'=>'50 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3'), 'image' => '#'),
-        array('title' => 'Formula Media',  'precio'=>'150 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 4'), 'image' => '#'),
-        array('title' => 'Formula Abanzada', 'precio'=>'--', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 5'), 'image' => '#'),
-    );
     ?>
     <head>
         <meta charset="utf-8">
@@ -30,17 +16,17 @@
         <meta name="keywords" content="<?php echo $palabrasClaves; ?>"
               <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../css/main.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -55,13 +41,13 @@
             <div class="container">
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav ">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="model.php?f=index">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
                             echo '<li><a href="' . $navegador[$i]['url'] . '">' . $navegador[$i]['string'] . '</a></li>';
                         }
                         ?>
-                        <li><a href="contacto.php">Contact</a></li>
+                        <li><a href="model.php?f=contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,6 +86,15 @@
                 ?>
 
             </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-2 col-xs-1"></div>
+                <div class="col-md-8 col-xs-10">
+                    <h2><?php echo $contenido['title'] ?></h2>
+                    <p><?php echo $contenido['texto']?></p>
+                </div>
+                <div class="col-md-2 col-xs-1"></div>
+            </div>
 
             <hr>
 
@@ -107,11 +102,11 @@
                 <p>&copy; Company 2015</p>
             </footer>
         </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="../js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

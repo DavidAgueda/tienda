@@ -6,4 +6,11 @@
  * and open the template in the editor.
  */
 
-header('Location: model/model.php?f=index');
+if(function_exists($_GET['f'])) {
+    if(isset($_GET['o'])){
+        $_GET['f']($_GET['o']);
+    }else{
+        $_GET['f']();
+    }
+   
+}

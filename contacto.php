@@ -5,22 +5,6 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 
     <?php
-    $titulo = 'Contacto';
-    $description = 'description';
-    $palabrasClaves = 'palabrasClaves';
-    $navegador = array(
-        array('string' => 'Paginas Web', 'url' => 'paginasweb.php'),
-        array('string' => 'Tiendas Online', 'url' => 'tiendasonline.php'),
-        array('string' => 'Dise&ntilde;o Grafico', 'url' => '#'),
-    );
-    $options = array(
-        array('string' => 'Formula basica', 'value'=>'Formula basica'),
-        array('string' => 'Formula Media',  'value'=>'Formula Media'),
-        array('string' => 'Formula Abanzada', 'value'=>'Formula Abanzada', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 5'), 'image' => '#'),
-        array('string' => 'Formula tienda basica', 'value' => 'Formula tienda basica', 'url' => '#', 'description' => array('caracteristica 1', 'caracteristica 2', 'caracteristica 3'), 'image' => '#'),
-        array('string' => 'Formula tienda Media', 'value' => 'Formula tienda Media', 'url' => '#', 'description' => array('caracteristica 1', 'caracteristica 2', 'caracteristica 3', 'caracteristica 4'), 'image' => '#'),
-        array('string' => 'Formula tienda Abanzada', 'value' => 'Formula tienda Abanzada', 'url' => '#', 'description' => array('caracteristica 1', 'caracteristica 2', 'caracteristica 3', 'caracteristica 5'), 'image' => '#')
-    );
 
 
     ?>
@@ -33,17 +17,17 @@
         <meta name="keywords" content="<?php echo $palabrasClaves; ?>"
               <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../css/main.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -58,13 +42,13 @@
             <div class="container">
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav ">
-                        <li class="active"><a href="index.php">Home</a></li>
+                        <li class="active"><a href="model.php?f=index">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
                             echo '<li><a href="' . $navegador[$i]['url'] . '">' . $navegador[$i]['string'] . '</a></li>';
                         }
                         ?>
-                        <li><a href="contacto.php">Contact</a></li>
+                        <li><a href="model.php?f=contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -78,7 +62,7 @@
                 <fieldset>
 
                     <!-- Form Name -->
-                    <legend>Form Name</legend>
+                    <legend>Formulario de Contacto</legend>
 
                     <!-- Text input-->
                     <div class="form-group">
@@ -139,9 +123,9 @@
         </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
                 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="../js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

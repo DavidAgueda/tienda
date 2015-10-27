@@ -5,21 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 
     <?php
-    $titulo = 'Tiendas online';
-    $description = 'description';
-    $palabrasClaves = 'palabrasClaves';
-    $navegador = array(
-        array('string' => 'Paginas Web', 'url' => 'paginasweb.php'),
-        array('string' => 'Tiendas Online', 'url' => 'tiendasonline.php'),
-        array('string' => 'Dise&ntilde;o Grafico', 'url' => '#'),
-    );
 
-    
-    $elementos = array(
-        array('title' => 'Formula tienda basica', 'precio'=>'50 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3'), 'image' => '#'),
-        array('title' => 'Formula tienda Media',  'precio'=>'150 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 4'), 'image' => '#'),
-        array('title' => 'Formula tienda Abanzada', 'precio'=>'--', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 5'), 'image' => '#'),
-    );
     ?>
     <head>
         <meta charset="utf-8">
