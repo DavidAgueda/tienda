@@ -50,13 +50,13 @@
                 </div>
                 <div class="navbar-collapse collapse in" aria-expanded="true">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="model.php?f=index">Home</a></li>
+                        <li class="active"><a href="../home">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
-                            echo '<li><a href="' . $navegador[$i]['url'] . '">' . $navegador[$i]['string'] . '</a></li>';
+                            echo '<li><a href="../' . $navegador[$i]['url'] . '">' . $navegador[$i]['string'] . '</a></li>';
                         }
                         ?>
-                        <li><a href="model.php?f=contact">Contact</a></li>
+                        <li><a href="../contact">Contact</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

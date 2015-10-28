@@ -13,19 +13,19 @@
         <meta name="description" content="<?php echo $description; ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="<?php echo $palabrasClaves; ?>"
-              <link rel="../apple-touch-icon" href="apple-touch-icon.png">
+              <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-        <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -48,29 +48,29 @@
                 </div>
                 <div class="navbar-collapse collapse in" aria-expanded="true">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="model.php?f=index">Home</a></li>
+                        <li class="activo"><a href="home">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
                             echo '<li><a href="' . $navegador[$i]['url'] . '">' . $navegador[$i]['string'] . '</a></li>';
                         }
                         ?>
-                        <li><a href="model.php?f=contact">Contact</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
-        <p>visitar esto para .htaccess https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/</p>
+<!--        <p>visitar esto para .htaccess https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/</p>
         <p>Lista de cosas ha hacer</p>
         <ol>
-<!--            <li>que no puedan meter codigo en el formulario de contacto</li>-->
-<!--            <li>redireccionar despues del email</li>-->
+            <li>que no puedan meter codigo en el formulario de contacto</li>
+            <li>redireccionar despues del email</li>
             <li>pagina de error ( mejorar ya que el css de pende de la posicion y los enlaces tambien )</li>
             <li>crear una pagina donde mostrar varios productos (las estilo tienda o fiverr)</li>
             <li>crear fichero .htaccess</li>
             <li>crear un estilo mas atractivo</li>
             <li>rellenar los textos</li>
             <li>hacer un sistema en el que despues de pagar (paypal) puede descargar el  fichero <br> http://entredesarrolladores.com/3051/como-integrar-una-pasarela-pago-paypal-tienda-virtual-con-php</li>
-        </ol>
+        </ol>-->
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="container">
 
@@ -126,6 +126,7 @@
                 for ($i = 0; $i < count($elementos); $i++) {
                     echo '  <div class="col-md-4">
                                     <h2>' . $elementos[$i]['title'] . '</h2>
+                                        <hr/>
                                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                                     <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                                 </div>';
@@ -145,9 +146,9 @@
         </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
-        <script src="../js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="../js/main.js"></script>
+        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

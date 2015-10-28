@@ -17,17 +17,17 @@
         <meta name="keywords" content="<?php echo $palabrasClaves; ?>"
               <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-        <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -51,13 +51,13 @@
                 </div>
                 <div class="navbar-collapse collapse in" aria-expanded="true">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="model.php?f=index">Home</a></li>
+                        <li class="active"><a href="home">Home</a></li>
                         <?php
                         for ($i = 0; $i < count($navegador); $i++) {
                             echo '<li><a href="' . $navegador[$i]['url'] . '">' . $navegador[$i]['string'] . '</a></li>';
                         }
                         ?>
-                        <li><a href="model.php?f=contact">Contact</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -132,9 +132,9 @@
         </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
                 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
-        <script src="../js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="../js/main.js"></script>
+        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

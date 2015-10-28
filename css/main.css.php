@@ -1,4 +1,6 @@
-
+<?php
+header('Content-Type: text/css');
+?>
 
 /* ==========================================================================
    Author's custom styles
@@ -66,16 +68,11 @@ body{
 }
 
 .jumbotron {
-/*    background-color: #36424a;*/
-    margin-bottom: 0;    
-    border-radius: initial;
-    background-color: initial; 
-    color:#fff !important;
-/*background-image: url(../img/mosaic.jpg)*/
+    background-color: #36424a;
+    margin-bottom: 0;
 }
 .nav {
-/*    background-color: #36424a;*/
-    background-color: initial; 
+    background-color: #36424a;
     padding: 2px;
     padding-bottom: 10px;
     /*        border: initial !important;*/
@@ -83,72 +80,16 @@ body{
 .navbar,.navbar-inverse{
     border-radius: initial;
     border:none;
-    background-color: initial; 
+    background-color: #36424a;
     background-image: initial;
+    font-weight: bold;
 }
 nav li{
-    color: #0099cc !important;
+    box-shadow: 2px 2px 2px black;
+    margin: 6px;
 }
 
-.jumbotron{
-    background-color: #0099cc;
-}
-.jumbotron p{
-    color: #33ccff;
-}
+<!--body{
+background-color: <?php echo '#f00';?>;
+}-->
 
-nav li{
-    margin: 5px;
-    background-color: #0099cc;
-    color: #fff;
-}
-.navbar-inverse .navbar-nav>li>a{ 
-    color: #fff;
-}
-.carousel-control.right , 
-.carousel-control.left{
-        background-color: initial; 
-    background-image: initial;
-}
-
-.carousel-control .glyphicon-chevron-right, .carousel-control .glyphicon-chevron-left {
-    color: black;
-}
-div >hr{
-/*    color: #0099cc !important;*/
-    background-color: #0099cc !important;
-/*    width: 3px !important;*/
-        border-top: 3px solid #0099cc;
-}
-div >h2{
-height: 100px;
-}
-div >p{
-height: 150px;
-}
-
-nav li:nth-child(1){
-    background-color: #f00;
-}
-nav li:nth-child(2){
-    background-color: #0099cc;
-}
-nav li:nth-child(3){
-    background-color: #33cc00;
-}
-nav li:nth-child(4){
-    background-color: #ff9900;
-}
-nav li:nth-child(5){
-    background-color: #006666;
-}
-nav li:nth-child(6){
-    background-color: #9c9b92;
-}
-nav li:nth-child(7){
-    background-color: #d692e6;
-}
-
-nav button{
-    background-color: #e6e606 !important;
-}

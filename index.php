@@ -6,4 +6,4 @@
  * and open the template in the editor.
  */
 
-header('Location: model/model.php?f=index');
+header('Location: home');

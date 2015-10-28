@@ -5,13 +5,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+        
 
 $navegador = array(
-    array('string' => 'Paginas Web', 'url' => './model.php?f=tresOpciones'),
-    array('string' => 'Tiendas Online', 'url' => './model.php?f=tresOpciones&o=1'),
-    array('string' => 'Aplicaciones android ', 'url' => './model.php?f=tresOpciones&o=2'),
-    array('string' => 'Productos ', 'url' => './model.php?f=productos'),
+    array('string' => 'Paginas Web', 'url' => 'oferta/0'),
+    array('string' => 'Tiendas Online', 'url' => 'oferta/1'),
+    array('string' => 'Aplicaciones android ', 'url' => 'oferta/2'),
+    array('string' => 'Productos ', 'url' => 'productos/'),
     array('string' => 'Dise&ntilde;o Grafico', 'url' => '#')
 );
 
@@ -22,8 +22,6 @@ function index(){
     $description = 'description';
     $palabrasClaves = 'palabrasClaves';
     
-    
-
     $slide = array(
         array('title' => 'Paginas Web1', 'url' => '#', 'description' => 'description', 'image' => '#'),
         array('title' => 'Paginas Web2', 'url' => '#', 'description' => 'description', 'image' => '#'),
@@ -35,6 +33,12 @@ function index(){
         array('title' => 'Tu propia tienda online', 'url' => '#', 'description' => 'description', 'image' => '#'),
         array('title' => 'Mejora tu posicionamiento en buscadores', 'url' => '#', 'description' => 'description', 'image' => '#'),
         array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
         array('title' => 'Nuestros clientes', 'url' => '#', 'description' => 'description', 'image' => '#')
     );
     
@@ -45,6 +49,29 @@ function index(){
 function tresOpciones($string ='' ){
     global $navegador;
     switch ($string) {
+        case '0':
+            $titulo = 'Paginas Web';
+            $description = 'description';
+            $palabrasClaves = 'palabrasClaves';
+
+
+            $elementos = array(
+                array('title' => 'Formula basica', 'precio'=>'50 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3'), 'image' => '#'),
+                array('title' => 'Formula Media',  'precio'=>'150 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 4'), 'image' => '#'),
+                array('title' => 'Formula Abanzada', 'precio'=>'--', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 5'), 'image' => '#'),
+            );
+            
+            $contenido = array(
+                'title'=>'Nuestas paginas web',
+                'texto'=> 'Con una experiencia de varios a&ntilde;os de trabajo '
+                . 'en el <strong>dise&ntilde;o y concepcion de sitios web</strong> '
+                . 'estamos listos para ofreceros soluciones de gran calidad y para '
+                . 'todos los presupuestos.'
+                . '<br/> '
+                . 'bla bla bla bla bla y mas bla'
+            );
+
+            break;
         case '1':
             $titulo = 'Tiendas online';
             $description = 'description';
@@ -87,26 +114,8 @@ function tresOpciones($string ='' ){
             break;
 
         default:
-            $titulo = 'Paginas Web';
-            $description = 'description';
-            $palabrasClaves = 'palabrasClaves';
-
-
-            $elementos = array(
-                array('title' => 'Formula basica', 'precio'=>'50 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3'), 'image' => '#'),
-                array('title' => 'Formula Media',  'precio'=>'150 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 4'), 'image' => '#'),
-                array('title' => 'Formula Abanzada', 'precio'=>'--', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 5'), 'image' => '#'),
-            );
-            
-            $contenido = array(
-                'title'=>'Nuestas paginas web',
-                'texto'=> 'Con una experiencia de varios a&ntilde;os de trabajo '
-                . 'en el <strong>dise&ntilde;o y concepcion de sitios web</strong> '
-                . 'estamos listos para ofreceros soluciones de gran calidad y para '
-                . 'todos los presupuestos.'
-                . '<br/> '
-                . 'bla bla bla bla bla y mas bla'
-            );
+            redire();
+            return;
             break;
     }
    
@@ -189,6 +198,10 @@ function okMail(){
 
             );
     require_once '../okmail.php';
+}
+
+function redire(){
+    header('Location: ../home');
 }
 
 require_once './main.php';
