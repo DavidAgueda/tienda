@@ -65,20 +65,28 @@ body{
     text-align: center;
 }
 
-.jumbotron {
-/*    background-color: #36424a;*/
+.item img{
+    width: 400px;
+    margin: 0 auto;
+}
+.item h2,.item p{
+    margin-left: 20%;
+}
+
+/*.jumbotron {
+    background-color: #36424a;
     margin-bottom: 0;    
     border-radius: initial;
     background-color: initial; 
     color:#fff !important;
-/*background-image: url(../img/mosaic.jpg)*/
+background-image: url(../img/mosaic.jpg)
 }
 .nav {
-/*    background-color: #36424a;*/
+    background-color: #36424a;
     background-color: initial; 
     padding: 2px;
     padding-bottom: 10px;
-    /*        border: initial !important;*/
+            border: initial !important;
 }
 .navbar,.navbar-inverse{
     border-radius: initial;
@@ -115,17 +123,24 @@ nav li{
     color: black;
 }
 div >hr{
-/*    color: #0099cc !important;*/
+    color: #0099cc !important;
     background-color: #0099cc !important;
-/*    width: 3px !important;*/
+    width: 3px !important;
         border-top: 3px solid #0099cc;
-}
+}*/
 div >h2{
-height: 100px;
+height: 70px;
 }
-div >p{
+div >p :not(precios){
 height: 150px;
 }
+.btn {
+     display: initial; 
+/*     padding: 5px;*/
+}
+
+
+/*
 
 nav li:nth-child(1){
     background-color: #f00;
@@ -151,4 +166,4 @@ nav li:nth-child(7){
 
 nav button{
     background-color: #e6e606 !important;
-}
+}*/

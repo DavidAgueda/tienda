@@ -81,13 +81,15 @@
                     for ($i = 0; $i < count($slide); $i++) {
                         if ($i == 0) {
                             echo '<div class = "item active">
+                                            <img src="img/'.$slide[$i]['image'].'" alt="" style="width:400px;height:400px;">
                                             <h2>' . $slide[$i]['title'] . '</h2>
-                                            <p>' . $slide[$i]['description'] . ' <br/> descripcion para este slide</p>
+                                            <p>' . $slide[$i]['description'] . '</p>
                                         </div>';
                         } else {
                             echo '<div class = "item ">
+                                            <img src="img/'.$slide[$i]['image'].'" alt="" style="width:400px;height:400px;">
                                             <h2>' . $slide[$i]['title'] . '</h2>
-                                            <p>' . $slide[$i]['description'] . '<br/> descripcion para este slide</p>
+                                            <p>' . $slide[$i]['description'] . '</p>
                                         </div>';
                         }
                     }
@@ -96,9 +98,9 @@
                         <?php
                         for ($i = 0; $i < count($slide); $i++) {
                             if ($i == 0) {
-                                echo '<li class="active" data-target="#carousel-example-generic" data-slide-to="' . $i . ' class=""></li>';
+                                echo '<li class="active" data-target="#carousel-example-generic" data-slide-to="' . $i . '" class=""></li>';
                             } else {
-                                echo '<li data-target="#carousel-example-generic" data-slide-to="' . $i . ' class=""></li>';
+                                echo '<li data-target="#carousel-example-generic" data-slide-to="' . $i . '" class=""></li>';
                             }
                         }
                         ?>
@@ -125,10 +127,11 @@
                 <?php
                 for ($i = 0; $i < count($elementos); $i++) {
                     echo '  <div class="col-md-4">
+                                    <img src="img/'.$elementos[$i]['image'].'" alt="" style="width:200px;height:200px;">
                                     <h2>' . $elementos[$i]['title'] . '</h2>
                                         <hr/>
-                                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                                    <p> '.$elementos[$i]['description'].'</p>
+                                    <p><a class="btn btn-default" href="'.$elementos[$i]['url'].'" role="button">Mas detalles &raquo;</a></p>
                                 </div>';
                     if ((($i + 1) % 3) == 0) {
                         echo'<div class="row"></div>';

@@ -23,23 +23,47 @@ function index(){
     $palabrasClaves = 'palabrasClaves';
     
     $slide = array(
-        array('title' => 'Paginas Web1', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Paginas Web2', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Paginas Web3', 'url' => '#', 'description' => 'description', 'image' => '#')
+        array(
+            'title' => 'Vende todo tipos de profuctos', 
+            'url' => '#', 
+            'description' => '<strong>Aumenta las ventas de tu tienda</strong> física o simplemente comienza un negocio con poca inversion. Con nuestras soluciones de tiendas online podrás comercializar todo tipo de productos.',
+            'image' => 'tienda1.png'),
+        array(
+            'title' => 'Dise&ntilde;os personalizados', 
+            'url' => '#', 
+            'description' => 'Claro está que no es lo mismo vender pasteles que productos electrónicos. Nosotros adaptamos tu tienda para que sea <strong>atractiva para tus clientes</strong>.', 
+            'image' => 'tienda2.jpg'),
+        array(
+            'title' => 'Simple y funcional', 
+            'url' => '#', 
+            'description' => 'Las soluciones que os ofrecemos son de sobra testeadas. Lo simple y conocido normalmente es la mejor solucion.', 
+            'image' => 'tienda3.png')
     );
     
     $elementos = array(
-        array('title' => 'Soluciones para todas las economias', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Tu propia tienda online', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Mejora tu posicionamiento en buscadores', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
-        array('title' => 'Nuestros clientes', 'url' => '#', 'description' => 'description', 'image' => '#')
+        array(
+            'title' => 'Soluciones para todas las economias', 
+            'url' => 'oferta/0', 
+            'description' => 'Te ofrecemos varias posibilidades para que comiences a vender tus productos en <strong>tu tienda online </strong>desde ya. Te ofrecemos la oportunidad de comenzar desde precios realmente interesante que podrás amortizar con tus primeras ventas. Todas nuestras tiendas son desarrolladas con el máximo cuidado y son sobradamente testeadas y probadas.', 
+            'image' => 'dollar-coins_1298639.jpg'),
+        array(
+            'title' => 'Tu propia tienda online', 
+            'url' => 'oferta/0', 
+            'description' => 'Tanto si tienes una tienda física, como si es tu primera experiencia en el comercio, tener tu propia tienda virtual te aportará <strong>nuevas fuentes de ingresos</strong>. No hay nada más fácil que rellenar tu tienda de productos y esperar a que lleguen los pedidos.', 
+            'image' => 'shop_1553340.jpg'),
+        array(
+            'title' => 'Mejora la posicion en buscadores', 
+            'url' => 'oferta/0', 
+            'description' => 'Nuestro <strong>equipo de desarrollo tiene en cuenta las ultimas tecnologias</strong>. Entre estas están las técnicas de posicionamiento SEO que nuestro equipo dedicado pone a vuestra disposición para aumentar las visitas a vuestra tienda.', 
+            'image' => 'people_1526927.jpg'),
+//        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+//        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+//        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+//        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+//        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+//        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+//        array('title' => 'Creacion de elementos graficos', 'url' => '#', 'description' => 'description', 'image' => '#'),
+//        array('title' => 'Nuestros clientes', 'url' => '#', 'description' => 'description', 'image' => '#')
     );
     
     require_once '../home.php';
@@ -56,8 +80,8 @@ function tresOpciones($string ='' ){
 
 
             $elementos = array(
-                array('title' => 'Formula basica', 'precio'=>'50 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3'), 'image' => '#'),
-                array('title' => 'Formula Media',  'precio'=>'150 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 4'), 'image' => '#'),
+                array('title' => 'Formula basica', 'precio'=>'5000 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3'), 'image' => '#'),
+                array('title' => 'Formula Media',  'precio'=>'15000 €', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 4'), 'image' => '#'),
                 array('title' => 'Formula Abanzada', 'precio'=>'--', 'url' => '#', 'description' => array('caracteristica 1','caracteristica 2','caracteristica 3','caracteristica 5'), 'image' => '#'),
             );
             
@@ -173,6 +197,11 @@ function productos(){
         array('title' => 'Redaccion de articulos', 'url' => '#', 
             'description' => 'redaccion de articulos'
             . '<br/> <a href="https://es.fiverr.com/trotaires/escribir-un-articulo-de-calidad-para-tu-blog-o-pagina-web?context=advanced_search&context_type=rating&context_referrer=search_gigs&source=top-bar&pos=5&funnel=f9b49a8b-7154-4227-93af-0d8424d0d4c5"> fiverr</a>' 
+            . '<br/>', 
+            'image' => '#'),
+        array('title' => 'Tienda online', 'url' => '#', 
+            'description' => 'redaccion de articulos'
+            . '<br/> <a href="https://es.fiverr.com/davidtheset/hacer-tu-ecommerce?context=advanced_search&context_type=rating&context_referrer=search_gigs&source=top-bar&pos=9&funnel=1cb7fbb3-be90-469d-a717-af4886ed9e08"> fiverr</a>' 
             . '<br/>', 
             'image' => '#')
     );
